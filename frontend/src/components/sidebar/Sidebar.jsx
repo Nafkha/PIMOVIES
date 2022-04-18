@@ -1,11 +1,14 @@
 import  './sidebar.css'
-import {FaHome,FaSignInAlt,FaSignOutAlt,FaUser} from 'react-icons/fa'
+import {FaHome,FaStar,FaSignOutAlt,FaPlus} from 'react-icons/fa'
+import {Link} from 'react-router-dom'
 function Sidebar() {
   return (
     <div className='sidebar'>
-        <a href='https://google.com'><FaHome className='icon'/></a>
-        <a href='https://google.com'><FaSignInAlt className='icon'/></a>
-        <a href='https://google.com'><FaUser className='icon'/></a>
+
+      <Link to='/browse'><FaHome className='icon'/></Link>
+       <Link to='/browse/favourites'> <FaStar className='icon'/></Link>
+       <Link to='/browse/ajouterfilm'> <FaPlus className='icon'/></Link>
+      <FaSignOutAlt className='icon'/>
       
 
 
