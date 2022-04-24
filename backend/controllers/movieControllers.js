@@ -24,9 +24,20 @@ const setMovie = asyncHandler(async(req,res)=>{
     res.status(200).json(movie)
 })
 
+const addRating = asyncHandler(async(req,res)=>{
+    Movies.findById(req.body.movieId).then(movie=>{
+        movie.rating.push(req.body.rating)
+        movie.save()
+        res.status(200).json(movie)
+    }).catch(err=>{
+        res.json(400).json("Error")
+    })
+})
+
 module.exports = {
     getMovie,
     setMovie,
     getMovieById,
+    addRating
  
 }

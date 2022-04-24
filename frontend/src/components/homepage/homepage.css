@@ -1,5 +1,5 @@
 .home{
-    background-image: url('bg.jpg');
+    background-image: linear-gradient( to top, rgba(0,0,0,.8) 60%,rgba(0,0,0,.3)),url("https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
     background-position: fixed;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -7,46 +7,20 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
      
 }
-.home .buttons{
-    align-self: center;
-}
-
-.home .buttons button{
-    margin-left: 20px;
-    cursor: pointer;
-    
-}
-.home .buttons  .createAccount{
-    background-color: rgb(128, 0, 0);
-    color: white;
-    border: none;
-    width: 200px;
-    height: 50px;
-    text-transform: uppercase;
-    
-    border-radius: 20px;
-}
-.home .buttons  .login{
-    background-color: transparent;
-    color: white;
+button{
+    border-radius: 30px;
     border: 1px solid white;
-    width: 200px;
-    height: 50px;
-    text-transform: uppercase;
-    
-    border-radius: 20px;
-}
-
-.home  .cr{
-    order: 1;
-    align-self: flex-end;
-
-    bottom: 0px;
     color: white;
-    font-size: 20px;
+    background-color: transparent;
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    
 }

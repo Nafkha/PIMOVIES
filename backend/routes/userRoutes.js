@@ -9,5 +9,4 @@ router.get('/me',protect ,getMe)
 router.post('/addFavourite',protect,addFavourites)
 router.post('/deleteFavourite',protect,deleteFavourites)
 router.get('/favouriteMovies',protect,getFavouriteMovies)
-
 module.exports =router
