@@ -6,17 +6,11 @@ const movieSchema = mongoose.Schema({
      },
      poster:{
          type:String,
-         required:[true,'Movie Poster'],
-     },
-     trailer:{
-         type:String,
+         //required:[true,'Movie Poster'],
      },
      releaseDate:{
          type: Date
-     },
-     rating:[{
-         type: Number
-     }]
+     }
      
   
 },

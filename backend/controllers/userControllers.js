@@ -46,6 +46,7 @@ const loginUser = asyncHandler(async (req,res)=>{
             _id: user.id,
             name:user.name,
             email:user.email,
+            favourites:user.favourites,
             token:generateToken(user._id)
         })
     }else{
@@ -59,6 +60,7 @@ const getMe = asyncHandler(async (req,res)=>{
         id: _id,
         nom,
         email,
+        favourites
     })
    
 })
@@ -70,6 +72,8 @@ const getFavouriteMovies = asyncHandler(async(req,res)=>{
 })
 const addFavourites = asyncHandler(async(req,res)=>{
     const user = await User.findById(req.user.id)
+    console.log("USER : "+user)
+    console.log("MOVIE ID "+req.body.movieId)
     user.favourites.push(req.body.movieId);
     const us = await user.save()
     res.json("Worked")

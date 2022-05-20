@@ -40,6 +40,22 @@ export const login = createAsyncThunk('auth/login', async (user, thunkAPI) => {
 export const logout = createAsyncThunk('auth/logout',async()=>{
     await authService.logout()
 })
+export const addFave = createAsyncThunk('/auth/addFavourite',async(id,thunkAPI)=>{
+    try{
+        const token = thunkAPI.getState().auth.user.token
+        console.log("TOKEN Slice : "+token)
+        console.log("ID Movie: "+id)
+        return await authService.addFavourite(token,id)
+    }catch(error){
+        const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString()
+      return thunkAPI.rejectWithValue(message)
+    }
+})
 
 export const authSlice = createSlice({
     name: 'auth',
@@ -76,6 +92,8 @@ export const authSlice = createSlice({
             state.isError = true
             state.message = action.payload
             state.user = null
+        }).addCase(addFave.fulfilled,(state,action)=>{
+            state.isSuccess = true;
         })
         .addCase(logout.fulfilled,(state) =>{
             state.user = null

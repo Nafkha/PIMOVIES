@@ -1,0 +1,53 @@
+.searchForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 25vh;
+}
+.movieListe{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(5, 0, 0);
+}
+.header{
+    height: 50vh;
+    background-size: cover;
+}
+.movieName{
+    background-color: rgba(255, 255, 255, 0.438);
+    border-radius: 30px;
+    border: 1px solid white;
+    height: 50px;
+    width: 350px;
+    padding-left: 15px;
+    font-size: 1.2rem;
+}
+.button_rechercher{
+    margin-top: 30px;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.copyright{
+    display: flex;
+    height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    
+}
+.copyright span{
+    color: white;
+    align-self: center;
+}
+.copyright span a{
+    text-decoration: none;
+}
+.copyright h1{
+    margin-bottom: 25vh;
+    color: white;
+}

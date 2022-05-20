@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+
+.card{
+    display: flex;
+    width: 250px;
+    height: 380px;
+    background-size: cover;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: inset 0 0 1em black, 0 0 2em black;
+    border-radius: 5px;
+
+
+
+}
+.card:hover{
+    cursor: pointer;
+    box-shadow: inset 0 0 7em black, 0 0 2em black;
+
+}
+.card .movieTitle{
+    color: white;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 150px;
+
+}
+.ajouterFavouris{
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.493);
+    font-size: 0.9rem;
+}
+.ajouterFavouris:hover{
+    width: 220px;
+    height: 55px;
+    font-size: 1.0rem;
+}
